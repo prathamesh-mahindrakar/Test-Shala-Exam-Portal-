@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.custom-toolbar {
+    background-color: #3f51b5;
+    /* Dark Blue/Gray */
+    color: white;
+}

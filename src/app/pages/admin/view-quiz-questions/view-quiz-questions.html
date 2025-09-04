@@ -1,0 +1,43 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <h2 class="mt-3">
+            Questions of <span class="fw-bold">{{ qTitle }}</span>
+        </h2>
+
+        <div class="container text-center">
+            <button matButton="filled" color="primary" [routerLink]="['/admin/add-question', qId, qTitle]">
+                Add Question
+            </button>
+        </div>
+
+        <mat-card *ngFor="let q of questions" class="mt-3 shadow-sm">
+            <mat-card-header>
+                <mat-card-title>Q. {{ q.content }}</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+                <ol type="A">
+                    <li>{{ q.option1 }}</li>
+                    <li>{{ q.option2 }}</li>
+                    <li>{{ q.option3 }}</li>
+                    <li>{{ q.option4 }}</li>
+                </ol>
+                <p><strong>Answer:</strong> {{ q.answer }}</p>
+            </mat-card-content>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-actions class="d-flex justify-content-end mt-2">
+                <!-- Update -->
+                <button mat-raised-button color="primary" [routerLink]="['/admin/update-question', q.quesid]">
+                    Update
+                </button>
+
+                <!-- Delete -->
+                <button class="ml20 mr20" mat-raised-button color="warn" (click)="deleteQuestion(q.quesid)">
+                    Delete
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

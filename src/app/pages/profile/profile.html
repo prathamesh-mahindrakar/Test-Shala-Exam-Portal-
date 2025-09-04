@@ -1,0 +1,51 @@
+<mat-card class="profile-card">
+    <h1 class="profile-title">Your Profile Details</h1>
+
+
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+
+                    <img class="profile-img" src="default.png" alt="Profile">
+                    <div class="profile-name"> {{user?.firstName}} {{user?.lastName}}</div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <!-- table details -->
+                        <table class="table table-bordered text-center profile-table">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user?.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>User ID</td>
+                                <td>{{user?.id}}</td>
+                            </tr>
+                            <tr *ngIf="user?.phone">
+                                <td>Phone</td>
+                                <td>{{user?.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user?.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td class="active-status">{{user?.enabled ? 'ACTIVE' : 'INACTIVE'}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <div class="container text-center action-buttons">
+        <button mat-raised-button color="primary" class="rect-btn">UPDATE</button>
+        <button mat-stroked-button color="accent" class="rect-btn ml10">SHARE</button>
+    </div>
+
+
+</mat-card>

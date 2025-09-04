@@ -1,0 +1,19 @@
+<div class="card shadow-sm">
+    <div class="card-header">
+        All Categories
+    </div>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex align-items-start" *ngFor="let category of categories">
+            <div class="me-3 fs-5">📂</div>
+            <div>
+                <div class="fw-bold">{{ category.title }}</div>
+                <small class="text-muted">{{ category.description }}</small>
+            </div>
+        </li>
+    </ul>
+
+    <div class="card-footer text-center">
+        <button routerLink="/admin/add-category" class="btn btn-primary fw-semibold px-4">Add New Category</button>
+    </div>
+</div>

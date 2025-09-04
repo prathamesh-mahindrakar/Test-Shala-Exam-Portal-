@@ -1,0 +1,4 @@
+.example-header-image {
+    background-image: url('/exam-time.png');
+    background-size: cover;
+}

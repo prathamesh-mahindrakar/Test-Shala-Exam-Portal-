@@ -1,0 +1,21 @@
+.primary-btn {
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: none;
+    /* keep normal case instead of ALL CAPS */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.primary-btn:hover {
+    background-color: #1565c0;
+    /* slightly darker primary */
+    transform: translateY(-2px);
+}
+
+.primary-btn:active {
+    background-color: #0d47a1;
+    /* darkest when clicked */
+    transform: translateY(0);
+}
